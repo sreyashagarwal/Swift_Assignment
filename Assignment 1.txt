@@ -1,0 +1,42 @@
+struct Product
+       {
+       var name : String
+       var price : Double
+       var quantity : Int
+       var type : String
+       }
+var product1 = Product(name : "lettuce", price : 10.5,quantity: 50,type: "Leafy green")
+var product2 = Product(name: "cabbage",price: 20 ,quantity: 100,type: "Cruciferous")
+var product3 =  Product(name: "pumpkin",price: 30,quantity: 30,type: "Marrow")
+var product4 =  Product(name: "cauliflower",price: 10,quantity: 25, type: "Cruciferous")
+var product5 =  Product(name: "zucchini",price: 20.5,quantity: 50,type: "Marrow")
+var product6 =  Product(name: "yam",price: 30 ,quantity: 50,type: "Root")
+var product7 =  Product(name: "spinach",price:  10,quantity:  100, type: "Leafy green")
+var product8 =  Product(name: "broccoli",price:  20.2,quantity: 75,type: "Cruciferous")
+var product9 =  Product(name: "Garlic",price: 30 ,quantity: 20, type: "Leafy green")
+var product10 = Product(name: "silverbeet",price: 10 ,quantity: 50,type: "Marrow")
+
+var ProductArray : [Product] = [product1 , product2 , product3 , product4 , product5 , product6 , product7 , product8 , product9 , product10]
+
+print("The Product list contains \(ProductArray.count) items.")
+
+
+var product11 = Product(name: "Potato",price: 10 ,quantity: 50,type: "Root")
+ProductArray.append(product11)
+print("The No of items in the list after addition is \(ProductArray.count)")
+print("The products are")
+var i = 1
+for pdk in ProductArray{    
+    print("\(i) : \(pdk.name)")
+    i=i+1
+}
+
+
+i = 1
+print("The products of type Leafy green are")
+for pdk in ProductArray{
+    if(pdk.type == "Leafy green"){
+        print("\(i) : \(pdk.name)")
+        i = i+1
+    }
+}

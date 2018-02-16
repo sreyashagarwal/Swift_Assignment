@@ -1,0 +1,41 @@
+
+struct PrimeMinisters  {
+	var name : String
+	var year : Int
+}
+
+var pm1 = PrimeMinisters(name: "Atal Bihari Vajpayee" , year : 1998)
+var pm2 = PrimeMinisters(name: "Narendra Modi" , year: 2014)
+var pm3 = PrimeMinisters(name: "Manmohan Singh" , year: 2004)
+var PmDictionary : [String: PrimeMinisters] = ["ABV1998": pm1 ,"NM2014": pm2 , "MNS2004": pm3]
+
+print("Dictionary Created")
+
+for (details) in PmDictionary{	
+	if(details.value.year == 2004){
+	print("The Prime Minister Elected in the Year \(details.value.year) is \(details.value.name)")
+	}	
+}
+
+var pm4 = PrimeMinisters(name: "Narendra Damodardas Modi" , year: 2014)
+PmDictionary["NDM2014"] = pm4
+print("Added Current Primeminister")
+
+
+var pmsort = [String]()
+for (key,value) in PmDictionary{    
+    pmsort.append(key)
+    }    
+pmsort.sort()
+print("The Sorted list according to year is ")
+for key1 in pmsort{
+	for (key,value) in PmDictionary{
+		if(key == key1)
+		{
+			print("Year \(value.year) Name \(value.name)")
+		}
+}
+}
+
+
+

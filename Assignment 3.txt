@@ -1,0 +1,49 @@
+class Employee
+        {
+           	var Id : String
+            var Name : String
+            var Designation : String
+            var Experience : Int
+            var Annualsalary : Double
+            var joining : String
+			init()
+			{
+				self.Id=""
+				self.Name=""
+				self.Designation=""
+				self.Experience=0
+				self.Annualsalary=0.0
+				self.joining=""
+			}
+            func Printsalary(){};
+        }
+
+		class Hr: Employee
+				{
+				   override func Printsalary()
+						{
+
+							super.Designation = "HR"
+							super.Experience = 4
+							super.Annualsalary = 8000 + (1000 * 4)
+							print("The salary for HR is \(super.Annualsalary)")
+						}
+
+				}
+
+        class Developer: Employee
+        {           
+             override func Printsalary()
+                {
+                 
+                    super.Designation = "developer"
+                    super.Experience = 5
+                    super.Annualsalary = 8000 + (2000 * 5)
+                    print(" salary for Developer is \(super.Annualsalary)")
+                }
+        }
+    
+var testing = Hr()
+testing.Printsalary()
+var testing1 = Developer()
+testing1.Printsalary()
